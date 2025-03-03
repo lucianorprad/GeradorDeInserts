@@ -9,13 +9,13 @@ No dia a dia, frequentemente preciso extrair produtos do banco de dados dos clie
 
 O GeradorDeInserts automatiza essa tarefa:
 
-    Basta usar a função CONCAT(itens, ";") na consulta SQL, como já faria normalmente.
+    Basta Fazer  a consulta SQL, como já faria normalmente.
     Em seguida, exporte o resultado como CSV e jogue no aplicativo.
     O programa gera automaticamente os inserts no formato correto, pronto para importação.
 
 🔧 Como Usar
 
-    Execute sua consulta SQL com CONCAT(itens, ";").
+    Execute sua consulta SQL.
     Exporte os dados em CSV.
     Carregue o arquivo no GeradorDeInserts.
     Copie e utilize os inserts gerados!
