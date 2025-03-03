@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace GeradorDeInserts
 {
@@ -32,14 +33,16 @@ namespace GeradorDeInserts
                     string linha;
                     while ((linha = reader.ReadLine()) != null)
                     {
-                        string[] valores = linha.Split(';');
+                        string[] valores = Regex.Split(linha, @"[;,]");
                         string codite = valores[0];
-                        string descricao = valores[1];
-                        string dataAtual= DateTime.Now.ToString("yyyy-MM-dd");
-                        string horaAtual= DateTime.Now.ToString("HH:mm:ss");
+                        string descricao = valores[1];                     
                         string insert = $"INSERT INTO HUBCIT_ANUNCI_CARGA (HUBCIT_CODITE, HUBCIT_CODSKU, HUBCIT_TIPPRE, HUBCIT_ESTFIX, HUBCIT_ENVEAN, HUBCIT_CODEMP, HUBCIT_ATUCOL, HUBCIT_FIXEST, HUBCIT_DTAENV, HUBCIT_HORENV) " +
-                            $"VALUES ('{codite}', '{codite}', '', '0.00', '0', {codemp}, 'S', 'N', '{dataAtual}', '{horaAtual}');";
+                            $"VALUES ('{codite}', '{codite}', '', '0.00', '0', '{codemp}', 'S', 'N', 'NULL', 'NULL');";
                         comandosSql.WriteLine(insert);
+                        string pastaDestino = Path.GetDirectoryName(pathCsv);
+                        string nomeArquivo = Path.Combine(pastaDestino, "inserts.sql");
+                        File.WriteAllText(nomeArquivo, comandosSql.ToString());
+                        MessageBox.Show("Arquivo lido com sucesso!");
                     }
                     }
                 }
@@ -49,16 +52,7 @@ namespace GeradorDeInserts
                 MessageBox.Show("Erro ao ler o arquivo: " + ex.Message);
             }
 
-            finally
-            {
-
-
-                string pastaDestino = Path.GetDirectoryName(pathCsv);
-                string nomeArquivo = Path.Combine(pastaDestino, "inserts.sql");
-                File.WriteAllText(nomeArquivo, comandosSql.ToString());
-
-                MessageBox.Show("Arquivo lido com sucesso!");
-            }
+          
 
 
 

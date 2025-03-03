@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GeradorDeInserts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eca10117db9feed4e18bc88033d63421efea26ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("GeradorDeInserts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GeradorDeInserts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

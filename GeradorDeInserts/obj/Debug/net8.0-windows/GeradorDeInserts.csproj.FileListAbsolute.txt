@@ -15,3 +15,4 @@ C:\Users\Luciano Prado\source\repos\GeradorDeInserts\GeradorDeInserts\obj\Debug\
 C:\Users\Luciano Prado\source\repos\GeradorDeInserts\GeradorDeInserts\obj\Debug\net8.0-windows\GeradorDeInserts.genruntimeconfig.cache
 C:\Users\Luciano Prado\source\repos\GeradorDeInserts\GeradorDeInserts\obj\Debug\net8.0-windows\ref\GeradorDeInserts.dll
 C:\Users\Luciano Prado\source\repos\GeradorDeInserts\GeradorDeInserts\obj\Debug\net8.0-windows\GeradorDeInserts.Properties.Resources.resources
+C:\Users\Luciano Prado\source\repos\GeradorDeInserts\GeradorDeInserts\obj\Debug\net8.0-windows\GeradorDeInserts.sourcelink.json
